@@ -10,11 +10,11 @@ export default function Header() {
       <div className="announcement">
         <span className="status-dot"></span>
         <span>
-          AgriSell v1.0.1 for Android — Official direct APK for Buyers, Farmers
-          &amp; Riders
+          AgriSell v1.0.1 for Android &mdash; Official direct APK for Buyers,
+          Farmers &amp; Riders
         </span>
         <a className="announcement-link" href="#how-to-install">
-          Install guide <span aria-hidden="true">↓</span>
+          Install guide <span aria-hidden="true">&darr;</span>
         </a>
       </div>
       <header className="site-header">
@@ -27,7 +27,7 @@ export default function Header() {
             />
           </a>
           <div className="nav-links">
-            <a href="#why-agrisell">Who it’s for</a>
+            <a href="#why-agrisell">Who it&rsquo;s for</a>
             <a href="#app-preview">App preview</a>
             <a href="#how-to-install">How to install</a>
           </div>

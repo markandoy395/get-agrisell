@@ -44,7 +44,8 @@ export default function Installation() {
             <p>
               Tap the completed download notification (or open your{" "}
               <strong>Downloads</strong> folder). If prompted, tap{" "}
-              <strong>Settings → Allow from this source</strong>, then go back.
+              <strong>Settings &rarr; Allow from this source</strong>, then go
+              back.
             </p>
           </li>
           <li className="install-step-card">
@@ -56,7 +57,7 @@ export default function Installation() {
             <p>
               Tap <strong>Install</strong>. If Google Play Protect shows a
               prompt for a new direct APK, tap{" "}
-              <strong>More details → Install anyway</strong>, then tap{" "}
+              <strong>More details &rarr; Install anyway</strong>, then tap{" "}
               <strong>Open</strong>.
             </p>
           </li>
@@ -89,7 +90,8 @@ export default function Installation() {
             </svg>
             <span>
               <strong>Security tip:</strong> After installing AgriSell, you can
-              turn your browser’s “Install unknown apps” toggle back off.
+              turn your browser&rsquo;s &ldquo;Install unknown apps&rdquo;
+              toggle back off.
             </span>
           </div>
         </div>
@@ -105,7 +107,7 @@ export default function Installation() {
             <svg aria-hidden="true">
               <use href="assets/icons.svg#download" />
             </svg>
-            Download AgriSell APK <span aria-hidden="true">↓</span>
+            Download AgriSell APK <span aria-hidden="true">&darr;</span>
           </button>
         </div>
         <p className="platform-note">

@@ -71,8 +71,8 @@ export default function Experience() {
           </div>
           <h3>Deliver with live routing</h3>
           <p>
-            Accept farm-to-buyer delivery batches matched to your vehicle’s load
-            capacity.
+            Accept farm-to-buyer delivery batches matched to your
+            vehicle&rsquo;s load capacity.
           </p>
           <ul className="role-list">
             <li>Go online/offline and accept nearby farm pickup assignments</li>

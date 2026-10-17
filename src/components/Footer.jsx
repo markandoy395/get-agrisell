@@ -10,14 +10,14 @@ export default function Footer() {
           />
         </a>
         <p>
-          Presell Produce, Waste Reduce — Connecting local farms, buyers, and
-          riders.
+          Presell Produce, Waste Reduce &mdash; Connecting local farms, buyers,
+          and riders.
         </p>
       </div>
       <div className="footer-links">
         <a href="#why-agrisell">Roles &amp; Features</a>
         <a href="#how-to-install">
-          Installation guide <span aria-hidden="true">↑</span>
+          Installation guide <span aria-hidden="true">&uarr;</span>
         </a>
       </div>
     </footer>

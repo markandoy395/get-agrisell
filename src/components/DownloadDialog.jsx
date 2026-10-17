@@ -20,7 +20,7 @@ export default function DownloadDialog({ dialogRef }) {
     >
       <form method="dialog">
         <button className="dialog-close" aria-label="Close download message">
-          ×
+          &times;
         </button>
         <span className="feature-icon">
           <svg aria-hidden="true">
@@ -29,8 +29,8 @@ export default function DownloadDialog({ dialogRef }) {
         </span>
         <h2 id="download-title">The APK is on its way</h2>
         <p id="download-description">
-          An Android download hasn’t been added yet. Please check back for the
-          AgriSell APK.
+          An Android download hasn&rsquo;t been added yet. Please check back for
+          the AgriSell APK.
         </p>
         <button className="button primary-download dialog-done">Got it</button>
       </form>
