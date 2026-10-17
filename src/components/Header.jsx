@@ -15,14 +15,11 @@ export default function Header() {
       <header className="site-header">
         <nav className="navigation container" aria-label="Main navigation">
           <a className="brand" href="#" aria-label="AgriSell home">
-            <span className="brand-icon">
-              <svg aria-hidden="true">
-                <use href="assets/icons.svg#leaf" />
-              </svg>
-            </span>
-            <span>
-              Agri<span className="brand-accent">Sell</span>
-            </span>
+            <img
+              className="brand-logo"
+              src="assets/agrisell-logo.png"
+              alt="AgriSell"
+            />
           </a>
           <div className="nav-links">
             <a href="#why-agrisell">Why AgriSell</a>

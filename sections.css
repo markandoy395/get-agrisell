@@ -113,8 +113,11 @@ h3 {
   gap: 20px;
 }
 .footer-brand {
-  display: block;
-  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-brand .brand-logo {
+  height: 34px;
 }
 .footer p {
   color: var(--muted);

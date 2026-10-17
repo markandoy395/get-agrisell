@@ -11,13 +11,8 @@
   .navigation {
     gap: 22px 10px;
   }
-  .brand {
-    font-size: 25px;
-  }
-  .brand-icon {
-    width: 30px;
+  .brand-logo {
     height: 32px;
-    margin-right: 7px;
   }
   .nav-download {
     min-width: auto;

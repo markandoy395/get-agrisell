@@ -104,25 +104,13 @@ svg {
 .brand {
   display: inline-flex;
   align-items: center;
-  font-size: 30px;
-  font-weight: 750;
-  letter-spacing: -1px;
+  flex-shrink: 0;
 }
-.brand-icon {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  background: var(--green);
-  color: white;
-  border-radius: 9px;
-  margin-right: 10px;
-}
-.brand-icon svg {
-  width: 23px;
-}
-.brand-accent {
-  color: var(--green);
+.brand-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 .nav-links {
   display: flex;
