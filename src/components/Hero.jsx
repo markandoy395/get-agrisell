@@ -50,7 +50,7 @@ export default function Hero() {
               </svg>
               <span>
                 <strong>Download for Android</strong>
-                <small>Direct APK &middot; v1.0.1 (33 MB)</small>
+                <small>Direct APK &middot; v1.0.1 (85 MB)</small>
               </span>
               <span className="arrow" aria-hidden="true">
                 &darr;

@@ -31,7 +31,7 @@ export default function Installation() {
             <p>
               Tap <strong>Download for Android</strong> on this page. If your
               browser asks for confirmation, tap{" "}
-              <strong>Download anyway</strong> and wait for the 33 MB file to
+              <strong>Download anyway</strong> and wait for the 85 MB file to
               finish.
             </p>
           </li>
