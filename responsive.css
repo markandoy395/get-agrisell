@@ -1,0 +1,101 @@
+@media (min-width: 1441px) {
+  .hero-visual {
+    margin-left: 5px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-inner {
+    grid-template-columns: 59% 41%;
+    min-height: 650px;
+  }
+  .hero-visual {
+    width: 480px;
+    margin-left: -30px;
+  }
+  h1 {
+    font-size: 52px;
+  }
+  .hero-description {
+    font-size: 19px;
+    max-width: 500px;
+  }
+  .primary-download {
+    padding-inline: 19px;
+  }
+  .primary-download strong {
+    font-size: 16px;
+  }
+  .hero-actions {
+    gap: 10px;
+  }
+  .secondary-button {
+    padding-inline: 18px;
+  }
+  .nav-links {
+    gap: 30px;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    width: calc(100% - 48px);
+  }
+  .navigation {
+    flex-wrap: wrap;
+    padding-block: 18px;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 55px;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-copy {
+    padding: 50px 0 20px;
+  }
+  .pill,
+  .hero-description {
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 58px;
+  }
+  .hero-actions,
+  .download-note {
+    justify-content: center;
+  }
+  .hero-visual {
+    width: min(565px, 100%);
+    margin: 10px auto 30px;
+  }
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 26px;
+    gap: 24px;
+  }
+  .section {
+    padding-block: 45px 60px;
+  }
+  .section-heading {
+    gap: 25px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .section-heading > p {
+    max-width: 330px;
+    font-size: 16px;
+  }
+  .feature-grid,
+  .install-steps {
+    gap: 24px;
+  }
+  .install-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

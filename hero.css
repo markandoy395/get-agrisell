@@ -1,0 +1,132 @@
+.hero {
+  background: linear-gradient(160deg, #f5faf6, #eefcf5);
+  overflow: hidden;
+}
+.hero-inner {
+  min-height: 722px;
+  display: grid;
+  grid-template-columns: 63% 37%;
+  align-items: center;
+  position: relative;
+}
+.hero-copy {
+  z-index: 1;
+  padding-block: 64px 86px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #008d46;
+}
+.pill {
+  border: 1px solid #cce8d2;
+  background: #eff9f0;
+  border-radius: 30px;
+  min-height: 39px;
+  max-width: 378px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 38px;
+}
+.pill svg {
+  width: 15px;
+  height: 15px;
+}
+h1 {
+  font-size: clamp(42px, 4.55vw, 66px);
+  line-height: 1.26;
+  letter-spacing: -1.9px;
+  margin: 0 0 30px;
+  font-weight: 750;
+}
+h1 span {
+  color: var(--green);
+}
+.hero-description {
+  font-size: 22px;
+  line-height: 1.47;
+  color: var(--muted);
+  max-width: 590px;
+  margin: 0 0 42px;
+  letter-spacing: 0.1px;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+.primary-download {
+  padding: 17px 24px;
+  background: #0d8b50;
+  color: white;
+  min-height: 76px;
+  font-size: 17px;
+}
+.primary-download:hover {
+  background: #087340;
+}
+.primary-download strong,
+.primary-download small {
+  display: block;
+  text-align: left;
+}
+.primary-download strong {
+  font-size: 18px;
+}
+.primary-download small {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+  color: #d1efdd;
+}
+.primary-download .download-icon {
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+}
+.arrow {
+  font-size: 24px;
+  margin-left: 12px;
+}
+.secondary-button {
+  border-color: #d2e3d5;
+  background: white;
+  padding: 20px 23px;
+  font-size: 16px;
+}
+.secondary-button:hover {
+  background: #e7f5eb;
+}
+.download-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 32px 0 0;
+}
+.download-note svg {
+  width: 15px;
+  height: 18px;
+}
+.download-note > span {
+  margin-inline: 4px;
+}
+.hero-visual {
+  position: relative;
+  width: 565px;
+  aspect-ratio: 565 / 630;
+  margin: -40px 0 0 -5px;
+  overflow: hidden;
+}
+.hero-visual img {
+  position: absolute;
+  width: 254.8673%;
+  height: auto;
+  max-width: none;
+  left: -154.8673%;
+  top: -23.0159%;
+}

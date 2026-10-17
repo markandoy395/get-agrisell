@@ -1,0 +1,163 @@
+.section {
+  padding-block: 30px 80px;
+}
+.section > .eyebrow {
+  margin: 0 0 30px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  margin: 0;
+}
+.section-heading > p {
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.feature {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  background: #def3e4;
+}
+h3 {
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  margin: 20px 0 10px;
+}
+.feature p,
+.install-steps p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.install-section {
+  background: white;
+  border-block: 1px solid var(--line);
+}
+.install-section .section {
+  padding-top: 70px;
+}
+.install-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+.step-number {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 650;
+  color: var(--green);
+}
+.install-steps h3 {
+  margin-top: 16px;
+}
+.install-callout {
+  margin-top: 50px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: var(--mint);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.install-callout h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+.install-callout p {
+  color: var(--muted);
+  margin: 0;
+}
+.install-callout .primary-download {
+  min-height: 60px;
+}
+.platform-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+.footer {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer-brand {
+  display: block;
+  font-size: 25px;
+}
+.footer p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer > a:last-child {
+  font-size: 14px;
+}
+dialog {
+  color: var(--ink);
+  width: min(440px, calc(100% - 32px));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 20px 80px #153e2e30;
+}
+dialog::backdrop {
+  background: #0b2a2366;
+  backdrop-filter: blur(4px);
+}
+dialog form {
+  position: relative;
+}
+dialog h2 {
+  font-size: 29px;
+  margin-top: 24px;
+}
+dialog p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+.dialog-close {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  background: transparent;
+  border: 0;
+  padding: 8px 12px;
+  font-size: 28px;
+  color: var(--muted);
+}
+.dialog-done {
+  min-height: 48px;
+  width: 100%;
+  margin-top: 12px;
+}

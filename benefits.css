@@ -1,0 +1,25 @@
+.benefit-strip {
+  border-top: 1px solid var(--line);
+  background: white;
+}
+.benefits {
+  min-height: 103px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.benefits > span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4d7559;
+  font-size: 15px;
+  font-weight: 600;
+}
+.benefits svg {
+  width: 27px;
+  height: 27px;
+  color: var(--green);
+  stroke-width: 2.2;
+}
