@@ -1,7 +1,6 @@
-import { useDownload } from "../DownloadProvider.jsx";
+import InstallQrCode from "./InstallQrCode.jsx";
 
 export default function Hero() {
-  const download = useDownload();
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero-inner container">
@@ -43,23 +42,7 @@ export default function Hero() {
               <strong>Rider</strong> &middot; Fulfill local deliveries
             </span>
           </div>
-          <div className="hero-actions">
-            <button className="button primary-download" onClick={download}>
-              <svg className="download-icon" aria-hidden="true">
-                <use href="assets/icons.svg#download" />
-              </svg>
-              <span>
-                <strong>Download for Android</strong>
-                <small>Direct APK &middot; v1.0.1 (85 MB)</small>
-              </span>
-              <span className="arrow" aria-hidden="true">
-                &darr;
-              </span>
-            </button>
-            <a className="button secondary-button" href="#how-to-install">
-              How to install <span aria-hidden="true">&darr;</span>
-            </a>
-          </div>
+          <InstallQrCode />
           <p className="download-note">
             <svg aria-hidden="true">
               <use href="assets/icons.svg#shield" />

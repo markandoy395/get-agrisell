@@ -24,7 +24,9 @@ Run `npm.cmd run build`, then deploy the contents of `dist/` to a static host. R
 2. Update `apkUrl` in `src/config.js` if you change the download location.
 3. Verify the download on an Android device. Cross-origin URLs may be opened by the browser instead of honoring the download filename.
 
-The existing release APK is included at `public/downloads/agrisell.apk` and connected to every download button. Vite copies it into `dist/downloads/` during builds. Replace it with a newer signed release when needed. Setting `apkUrl` to `null` makes the buttons show the availability message instead.
+The existing release APK is included at `public/downloads/agrisell.apk`. The QR code encodes its absolute URL using the current website address, including any hosting subdirectory. Visitors can scan it with an Android camera or tap it on the same phone to download the installer, then approve installation in Android. Vite copies the APK into `dist/downloads/` during builds. Replace it with a newer signed release when needed. Setting `apkUrl` to `null` shows an installer availability message.
+
+For scanning during local development, use a network-accessible website address rather than localhost. In production, serve the page and APK from a public HTTPS host.
 
 ## Files
 
@@ -32,6 +34,7 @@ The existing release APK is included at `public/downloads/agrisell.apk` and conn
 - `src/components/`: page sections and availability dialog.
 - `src/DownloadProvider.jsx`: shared React download action and dialog reference.
 - `src/config.js`: APK download URL.
+- `src/components/InstallQrCode.jsx`, `qr-code.css`: scannable installer QR code and responsive styles.
 - `styles.css`, `hero.css`, `benefits.css`: shared styles and reference hero layout.
 - `sections.css`: experience, installation guide, footer, and dialog styles.
 - `responsive.css`, `mobile.css`: tablet, phone, and reduced-motion styles.

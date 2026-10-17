@@ -7,6 +7,7 @@ import "../benefits.css";
 import "../sections.css";
 import "../responsive.css";
 import "../mobile.css";
+import "../qr-code.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

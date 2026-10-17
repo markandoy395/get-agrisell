@@ -1,7 +1,4 @@
-import { useDownload } from "../DownloadProvider.jsx";
-
 export default function Header() {
-  const download = useDownload();
   return (
     <>
       <a className="skip-link" href="#main">
@@ -31,12 +28,12 @@ export default function Header() {
             <a href="#app-preview">App preview</a>
             <a href="#how-to-install">How to install</a>
           </div>
-          <button className="button nav-download" onClick={download}>
+          <a className="button nav-download" href="#install-qr">
             <svg aria-hidden="true">
               <use href="assets/icons.svg#download" />
             </svg>
-            Download APK
-          </button>
+            Get the app
+          </a>
         </nav>
       </header>
     </>

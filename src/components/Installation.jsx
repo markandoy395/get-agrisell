@@ -1,7 +1,4 @@
-import { useDownload } from "../DownloadProvider.jsx";
-
 export default function Installation() {
-  const download = useDownload();
   return (
     <section
       className="install-section"
@@ -25,14 +22,14 @@ export default function Installation() {
           <li className="install-step-card">
             <div className="step-top">
               <span className="step-number">01</span>
-              <span className="step-badge">Download</span>
+              <span className="step-badge">Scan</span>
             </div>
-            <h3>Download agrisell.apk</h3>
+            <h3>Scan the QR code</h3>
             <p>
-              Tap <strong>Download for Android</strong> on this page. If your
-              browser asks for confirmation, tap{" "}
-              <strong>Download anyway</strong> and wait for the 85 MB file to
-              finish.
+              Scan the QR code with your Android camera and open the link. On
+              your phone already? Tap the QR code. If your browser asks for
+              confirmation, tap <strong>Download anyway</strong> and wait for
+              the 85 MB file to finish.
             </p>
           </li>
           <li className="install-step-card">
@@ -103,12 +100,12 @@ export default function Installation() {
               and Riders.
             </p>
           </div>
-          <button className="button primary-download" onClick={download}>
+          <a className="button primary-download" href="#install-qr">
             <svg aria-hidden="true">
               <use href="assets/icons.svg#download" />
             </svg>
-            Download AgriSell APK <span aria-hidden="true">&darr;</span>
-          </button>
+            Scan to get AgriSell <span aria-hidden="true">&uarr;</span>
+          </a>
         </div>
         <p className="platform-note">
           Compatible with Android 8.0 and above. iOS (iPhone/iPad) is not
