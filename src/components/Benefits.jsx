@@ -1,35 +1,32 @@
 export default function Benefits() {
   return (
-    <>
-      {" "}
-      <div className="benefit-strip" aria-label="AgriSell highlights">
-        <div className="container benefits">
-          <span>
-            <svg aria-hidden="true">
-              <use href="assets/icons.svg#leaf" />
-            </svg>
-            Fresh local produce
-          </span>
-          <span>
-            <svg aria-hidden="true">
-              <use href="assets/icons.svg#arrow" />
-            </svg>
-            Easy product discovery
-          </span>
-          <span>
-            <svg aria-hidden="true">
-              <use href="assets/icons.svg#heart" />
-            </svg>
-            Favorites and deals
-          </span>
-          <span>
-            <svg aria-hidden="true">
-              <use href="assets/icons.svg#phone" />
-            </svg>
-            Android direct download
-          </span>
-        </div>
+    <div className="benefit-strip" aria-label="AgriSell platform capabilities">
+      <div className="container benefits">
+        <span>
+          <svg aria-hidden="true">
+            <use href="assets/icons.svg#leaf" />
+          </svg>
+          Presell &amp; Harvest Reservations
+        </span>
+        <span>
+          <svg aria-hidden="true">
+            <use href="assets/icons.svg#shield" />
+          </svg>
+          Verified Local Farms
+        </span>
+        <span>
+          <svg aria-hidden="true">
+            <use href="assets/icons.svg#truck" />
+          </svg>
+          Live GPS Delivery Tracking
+        </span>
+        <span>
+          <svg aria-hidden="true">
+            <use href="assets/icons.svg#check" />
+          </svg>
+          Cash on Delivery &amp; GCash
+        </span>
       </div>
-    </>
+    </div>
   );
 }

@@ -4,13 +4,18 @@ export default function Header() {
   const download = useDownload();
   return (
     <>
-      {" "}
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <div className="announcement">
-        <span className="status-dot"></span> AgriSell is available as a direct
-        Android APK — not on Google Play yet <span aria-hidden="true">↗</span>
+        <span className="status-dot"></span>
+        <span>
+          AgriSell v1.0.1 for Android — Official direct APK for Buyers, Farmers
+          &amp; Riders
+        </span>
+        <a className="announcement-link" href="#how-to-install">
+          Install guide <span aria-hidden="true">↓</span>
+        </a>
       </div>
       <header className="site-header">
         <nav className="navigation container" aria-label="Main navigation">
@@ -22,7 +27,7 @@ export default function Header() {
             />
           </a>
           <div className="nav-links">
-            <a href="#why-agrisell">Why AgriSell</a>
+            <a href="#why-agrisell">Who it’s for</a>
             <a href="#app-preview">App preview</a>
             <a href="#how-to-install">How to install</a>
           </div>
@@ -30,7 +35,7 @@ export default function Header() {
             <svg aria-hidden="true">
               <use href="assets/icons.svg#download" />
             </svg>
-            Get the APK
+            Download APK
           </button>
         </nav>
       </header>

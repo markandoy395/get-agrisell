@@ -1,38 +1,85 @@
-@media (min-width: 1441px) {
-  .hero-visual {
-    margin-left: 5px;
-  }
+.footer {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 24px;
+}
+.footer-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-brand .brand-logo {
+  height: 34px;
+}
+.footer p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+dialog {
+  color: var(--ink);
+  width: min(440px, calc(100% - 32px));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 20px 80px #153e2e30;
+}
+dialog::backdrop {
+  background: #0b2a2366;
+  backdrop-filter: blur(4px);
+}
+dialog form {
+  position: relative;
+}
+dialog h2 {
+  font-size: 29px;
+  margin-top: 24px;
+}
+dialog p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+.dialog-close {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  background: transparent;
+  border: 0;
+  padding: 8px 12px;
+  font-size: 28px;
+  color: var(--muted);
+}
+.dialog-done {
+  min-height: 48px;
+  width: 100%;
+  margin-top: 12px;
 }
 @media (max-width: 1200px) {
   .hero-inner {
-    grid-template-columns: 59% 41%;
-    min-height: 650px;
+    grid-template-columns: 58% 42%;
+    min-height: 640px;
   }
   .hero-visual {
-    width: 480px;
-    margin-left: -30px;
+    width: 470px;
+    margin-left: -20px;
   }
-  h1 {
-    font-size: 52px;
-  }
-  .hero-description {
-    font-size: 19px;
-    max-width: 500px;
-  }
-  .primary-download {
-    padding-inline: 19px;
-  }
-  .primary-download strong {
-    font-size: 16px;
-  }
-  .hero-actions {
-    gap: 10px;
-  }
-  .secondary-button {
-    padding-inline: 18px;
-  }
-  .nav-links {
-    gap: 30px;
+  .install-steps {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 960px) {
@@ -41,58 +88,57 @@
   }
   .navigation {
     flex-wrap: wrap;
-    padding-block: 18px;
+    padding-block: 16px;
   }
   .nav-links {
     order: 3;
     width: 100%;
     justify-content: center;
-    gap: 55px;
+    gap: 48px;
   }
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
   }
   .hero-copy {
-    padding: 50px 0 20px;
+    padding: 46px 0 20px;
   }
   .pill,
   .hero-description {
     margin-inline: auto;
   }
-  h1 {
-    font-size: 58px;
-  }
+  .role-badges,
   .hero-actions,
   .download-note {
     justify-content: center;
   }
   .hero-visual {
-    width: min(565px, 100%);
+    width: min(540px, 100%);
     margin: 10px auto 30px;
   }
   .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-block: 26px;
-    gap: 24px;
+    padding-block: 24px;
+    gap: 20px;
   }
   .section {
-    padding-block: 45px 60px;
+    padding-block: 48px 60px;
   }
   .section-heading {
-    gap: 25px;
-  }
-  h2 {
-    font-size: 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
   .section-heading > p {
-    max-width: 330px;
-    font-size: 16px;
+    max-width: none;
   }
-  .feature-grid,
-  .install-steps {
-    gap: 24px;
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .install-tips {
+    grid-template-columns: 1fr;
   }
   .install-callout {
     align-items: flex-start;
