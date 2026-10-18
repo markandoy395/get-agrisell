@@ -28,7 +28,33 @@ The existing release APK is included at `public/downloads/agrisell.apk`. The QR 
 
 For scanning during local development, use a network-accessible website address rather than localhost. In production, serve the page and APK from a public HTTPS host.
 
-## Files
+## In-app update notifications
+
+The Flutter app reads this website's `public/release.json` to offer newer Android
+builds. Prepare the APK and matching metadata together from this folder:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\prepare_android_update.ps1 -Version 1.0.4 -BuildNumber 5 -Notes 'Improvements and bug fixes.'
+npm.cmd run build
+```
+
+Use a higher build number for each release, then deploy the complete `dist/`
+folder to GitHub Pages. The script preserves the existing download button and QR
+URL and creates a versioned APK URL for update prompts. Users must manually
+install the first APK containing the popup. See
+`../agresellApp/docs/app_updates.md` for rollout and signing requirements.
+
+To test the popup, install `downloads/agrisell-1.0.2-3.apk` first and open the
+app while online. It should offer the published 1.0.3/build 4 update. Tap
+**Update now**, open the downloaded APK, and approve **Update** in Android.
+After upgrading, the popup should stop appearing. The normal website download
+and QR code install the latest build directly.
+
+Release builds use an isolated `.agrisell-release` folder beside the projects,
+with integration_test omitted only from its temporary pubspec. This avoids
+conflicts with IDE-generated files while preserving the app's integration tests.
+
+## Source files
 
 - `src/App.jsx`: React page composition.
 - `src/components/`: page sections and availability dialog.
