@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.3",
-    "buildNumber":  4,
-    "apkUrl":  "downloads/agrisell-1.0.3-4.apk",
-    "notes":  "This release includes update notifications inside AgriSell."
+    "version":  "1.0.4",
+    "buildNumber":  5,
+    "apkUrl":  "downloads/agrisell-1.0.4-5.apk",
+    "notes":  "You can now see the installed app version on buyer, farmer and rider Account screens and Settings."
 }
