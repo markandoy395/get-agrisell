@@ -34,7 +34,7 @@ The Flutter app reads this website's `public/release.json` to offer newer Androi
 builds. Prepare the APK and matching metadata together from this folder:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\prepare_android_update.ps1 -Version 1.0.5 -BuildNumber 6 -Notes 'Improvements and bug fixes.'
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\prepare_android_update.ps1 -Version 1.0.6 -BuildNumber 7 -Notes 'Improvements and bug fixes.'
 npm.cmd run build
 ```
 
@@ -45,7 +45,7 @@ install the first APK containing the popup. See
 `../agresellApp/docs/app_updates.md` for rollout and signing requirements.
 
 To test the popup, install `downloads/agrisell-1.0.2-3.apk` first and open the
-app while online. It should offer the published 1.0.4/build 5 update. Tap
+app while online. It should offer the published 1.0.5/build 6 update. Tap
 **Update now**, open the downloaded APK, and approve **Update** in Android.
 After upgrading, the popup should stop appearing. The normal website download
 and QR code install the latest build directly.
