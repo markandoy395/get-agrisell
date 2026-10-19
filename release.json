@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.4",
-    "buildNumber":  5,
-    "apkUrl":  "downloads/agrisell-1.0.4-5.apk",
-    "notes":  "You can now see the installed app version on buyer, farmer and rider Account screens and Settings."
+    "version":  "1.0.5",
+    "buildNumber":  6,
+    "apkUrl":  "downloads/agrisell-1.0.5-6.apk",
+    "notes":  "Improved loading states for chat and product screens."
 }
