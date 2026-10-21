@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.6",
-    "buildNumber":  7,
-    "apkUrl":  "downloads/agrisell-1.0.6-7.apk",
-    "notes":  "Improved farmer product publishing and approval refresh."
+    "version":  "1.0.7",
+    "buildNumber":  8,
+    "apkUrl":  "downloads/agrisell-1.0.7-8.apk",
+    "notes":  "New bottom-sheet update prompt and shorter AgriSell app name."
 }
