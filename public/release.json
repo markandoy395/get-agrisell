@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.5",
-    "buildNumber":  6,
-    "apkUrl":  "downloads/agrisell-1.0.5-6.apk",
-    "notes":  "Improved loading states for chat and product screens."
+    "version":  "1.0.6",
+    "buildNumber":  7,
+    "apkUrl":  "downloads/agrisell-1.0.6-7.apk",
+    "notes":  "Improved farmer product publishing and approval refresh."
 }
