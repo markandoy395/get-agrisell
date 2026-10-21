@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.7",
-    "buildNumber":  8,
-    "apkUrl":  "downloads/agrisell-1.0.7-8.apk",
-    "notes":  "New bottom-sheet update prompt and shorter AgriSell app name."
+    "version":  "1.0.8",
+    "buildNumber":  9,
+    "apkUrl":  "downloads/agrisell-1.0.8-9.apk",
+    "notes":  "Category names stay on one line, including on small screens."
 }
