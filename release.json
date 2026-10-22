@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.8",
-    "buildNumber":  9,
-    "apkUrl":  "downloads/agrisell-1.0.8-9.apk",
-    "notes":  "Category names stay on one line, including on small screens."
+    "version":  "1.0.9",
+    "buildNumber":  10,
+    "apkUrl":  "downloads/agrisell-1.0.9-10.apk",
+    "notes":  "Improved notification permission flow and shipping address entry."
 }
