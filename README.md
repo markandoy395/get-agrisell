@@ -18,6 +18,12 @@ Open the local URL printed by Vite. Use the development server instead of openin
 
 Run `npm.cmd run build`, then deploy the contents of `dist/` to a static host. Run `npm.cmd run preview` to preview that build locally. The relative Vite base supports hosting in a subdirectory.
 
+For Cloudflare Workers Assets, use build command `npm run build` and assets
+directory `dist`. There is no checked-in Wrangler/deployment configuration;
+keep these values in the existing Cloudflare deployment settings. The build
+disables Vite's automatic public-directory copy and copies non-APK assets only.
+Original APKs remain in `public/downloads/`. Do not deploy `public/` as assets.
+
 ## Social sharing preview
 
 `index.html` includes Open Graph and large-image Twitter card metadata with the
@@ -34,13 +40,38 @@ may cache old previews until they fetch the page again.
 
 ## Add the release APK
 
-1. Put the signed release APK at `public/downloads/agrisell.apk`, or upload it to your download host.
-2. Update `apkUrl` in `src/config.js` if you change the download location.
-3. Verify the download on an Android device. Cross-origin URLs may be opened by the browser instead of honoring the download filename.
+The download buttons and QR code use a separately hosted HTTPS URL. By default,
+the host is `https://markandoy395.github.io/get-agrisell/downloads`, where the
+existing APK releases are published. No upload or environment change is needed
+to keep using that host. Keep its existing APK files available when publishing
+future GitHub Pages changes; `dist/` no longer contains installers.
 
-The existing release APK is included at `public/downloads/agrisell.apk`. The QR code encodes its absolute URL using the current website address, including any hosting subdirectory. Visitors can scan it with an Android camera or tap it on the same phone to download the installer, then approve installation in Android. Vite copies the APK into `dist/downloads/` during builds. Replace it with a newer signed release when needed. Setting `apkUrl` to `null` shows an installer availability message.
+To use Supabase Storage instead:
 
-For scanning during local development, use a network-accessible website address rather than localhost. In production, serve the page and APK from a public HTTPS host.
+1. Create a public bucket such as `app-releases` in the existing Supabase project.
+   Set both the project's and bucket's upload limits above the APK size (100 MB
+   accommodates the current releases). Supabase Free caps files at 50 MB, so
+   these approximately 85 MB installers require a plan with a higher limit or
+   continued use of the existing GitHub host.
+2. Upload the original files from `public/downloads/`, preserving every filename,
+   including `agrisell.apk` and the versioned APKs. Use content type
+   `application/vnd.android.package-archive`. Confirm the public URLs download
+   without signing in before switching hosts.
+3. Set the Cloudflare **build environment** variable `VITE_APK_BASE_URL` to the
+   public directory URL, for example
+   `https://PROJECT_REF.supabase.co/storage/v1/object/public/app-releases`.
+   For local builds, copy `.env.example` to `.env.local` and change the value.
+   This value is public: use no service-role key, API key, or expiring signed URL.
+4. Rebuild and redeploy. Buttons and QR codes use `<base URL>/agrisell.apk`.
+   The built `release.json` points to the same host's versioned installer.
+   Cloudflare's generated `dist/_redirects` forwards old `/downloads/*` URLs to
+   matching filenames on the selected host with HTTP 302.
+
+Verify downloads and QR scanning on an Android device after deployment.
+Cross-origin URLs may open in the browser rather than honoring the HTML
+download filename. Vite preview does not implement Cloudflare's `_redirects`;
+test legacy redirects on Cloudflare. No Supabase credentials are needed by
+the website to download publicly hosted APKs.
 
 ## In-app update notifications
 
@@ -52,9 +83,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\prepare_android_updat
 npm.cmd run build
 ```
 
-Use a higher build number for each release, then deploy the complete `dist/`
-folder to GitHub Pages. The script preserves the existing download button and QR
-URL and creates a versioned APK URL for update prompts. Users must manually
+Use a higher build number for each release. Upload the new versioned APK and
+replace `agrisell.apk` on the selected external host **before** deploying `dist/`
+to Cloudflare. The preparation script keeps the originals in `public/downloads/`;
+the build rewrites the relative manifest APK URL to the selected external host.
+The download button and QR URL stay stable. Users must manually
 install the first APK containing the popup. See
 `../agresellApp/docs/app_updates.md` for rollout and signing requirements.
 
