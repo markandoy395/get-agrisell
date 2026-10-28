@@ -18,9 +18,11 @@ Open the local URL printed by Vite. Use the development server instead of openin
 
 Run `npm.cmd run build`, then deploy the contents of `dist/` to a static host. Run `npm.cmd run preview` to preview that build locally. The relative Vite base supports hosting in a subdirectory.
 
-For Cloudflare Workers Assets, use build command `npm run build` and assets
-directory `dist`. There is no checked-in Wrangler/deployment configuration;
-keep these values in the existing Cloudflare deployment settings. The build
+For Cloudflare Workers Assets, use build command `npm run build` and deploy
+command `npx wrangler deploy`. The checked-in `wrangler.jsonc` explicitly selects
+`dist` as the assets directory so Wrangler does not need to infer deployment
+settings from `vite.config.js`. Its Worker name is `get-agrisell`; this must match
+the Worker connected to the repository in Cloudflare. The build
 disables Vite's automatic public-directory copy and copies non-APK assets only.
 Original APKs remain in `public/downloads/`. Do not deploy `public/` as assets.
 
