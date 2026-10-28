@@ -18,6 +18,20 @@ Open the local URL printed by Vite. Use the development server instead of openin
 
 Run `npm.cmd run build`, then deploy the contents of `dist/` to a static host. Run `npm.cmd run preview` to preview that build locally. The relative Vite base supports hosting in a subdirectory.
 
+## Social sharing preview
+
+`index.html` includes Open Graph and large-image Twitter card metadata with the
+absolute GitHub Pages URL. The preview is `public/assets/og-image.png` (1200 x 630).
+Keep the canonical, page, and image URLs in sync if the hosting address changes.
+To regenerate the branded image on Windows from the existing logo:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\create_og_image.ps1
+```
+
+Build and deploy `dist/` to publish both the metadata and image. Social platforms
+may cache old previews until they fetch the page again.
+
 ## Add the release APK
 
 1. Put the signed release APK at `public/downloads/agrisell.apk`, or upload it to your download host.
