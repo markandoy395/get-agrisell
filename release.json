@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.9",
-    "buildNumber":  10,
-    "apkUrl":  "downloads/agrisell-1.0.9-10.apk",
-    "notes":  "Improved notification permission flow and shipping address entry."
+    "version":  "1.0.10",
+    "buildNumber":  11,
+    "apkUrl":  "downloads/agrisell-1.0.10-11.apk",
+    "notes":  "Updated buyer, farmer, and rider app with real-data empty states, tracking fixes, and startup improvements."
 }
