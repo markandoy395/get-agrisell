@@ -11,7 +11,7 @@ New-Item -ItemType Directory -Path $staging -Force | Out-Null
 
 # Isolate generated files from IDE runs. Exclude test-only native plugins in
 # this release copy to avoid Flutter's dev-plugin registration mismatch.
-foreach ($directory in @('lib', 'assets', 'android')) {
+foreach ($directory in @('lib', 'assets', 'android', 'third_party')) {
     & robocopy (Join-Path $source $directory) (Join-Path $staging $directory) /E /NFL /NDL /NJH /NJS /NP /XD build .gradle .kotlin .cxx /XF GeneratedPluginRegistrant.java | Out-Host
     if ($LASTEXITCODE -ge 8) { throw "Could not copy $directory for release." }
 }
@@ -25,7 +25,7 @@ if ($pubspec -match '(?m)^  integration_test:') { throw 'Could not exclude integ
 
 Push-Location -LiteralPath $staging
 try {
-    & flutter build apk --release "--build-name=$Version" "--build-number=$BuildNumber" | Out-Host
+    & flutter build apk --release --tree-shake-icons --split-debug-info=build/symbols "--build-name=$Version" "--build-number=$BuildNumber" | Out-Host
     if ($LASTEXITCODE -ne 0) { throw 'Isolated release APK build failed.' }
 } finally {
     Pop-Location
