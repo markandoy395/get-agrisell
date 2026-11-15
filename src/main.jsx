@@ -8,6 +8,7 @@ import "../sections.css";
 import "../responsive.css";
 import "../mobile.css";
 import "../qr-code.css";
+import "../mobile-accessibility.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

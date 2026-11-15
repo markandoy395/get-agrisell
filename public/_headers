@@ -1,0 +1,36 @@
+# HTML and installer release metadata must be checked on every visit.
+/
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache
+
+/release.json
+  Cache-Control: no-cache
+
+# Vite changes these filenames when their contents change.
+/assets/index-*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/index-*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Rename these files and update references when replacing their contents.
+/assets/app-preview.png
+  Cache-Control: public, max-age=2592000
+
+/assets/og-image.png
+  Cache-Control: public, max-age=2592000
+
+# These stable URLs must pick up replacements without waiting for expiration.
+/assets/agrisell-logo.png
+  Cache-Control: no-cache
+
+/assets/agrisellTabIcon.png
+  Cache-Control: no-cache
+
+/assets/icons.svg
+  Cache-Control: no-cache
+
+/assets/leaf.svg
+  Cache-Control: no-cache

@@ -26,6 +26,23 @@ the Worker connected to the repository in Cloudflare. The build
 disables Vite's automatic public-directory copy and copies non-APK assets only.
 Original APKs remain in `public/downloads/`. Do not deploy `public/` as assets.
 
+### Browser caching
+
+`public/_headers` is copied to `dist/_headers` and applied by Cloudflare Workers
+Assets. HTML and `release.json` use `no-cache`: browsers may keep a copy but must
+check freshness before reusing it. Vite's hashed JavaScript and CSS bundles are
+cached for one year with `immutable`; changing their contents produces new URLs.
+Preview images are cached for 30 days. Rename them and update their references
+when replacing them to avoid showing the old image until its cache expires.
+Logos, icons, and SVGs with stable filenames revalidate on each use, allowing
+unchanged responses to reuse the cached body without delaying branding updates.
+
+Google Fonts and external APK hosts control their own response headers; this
+file cannot change them. The site has no API or live price endpoints. Any future
+API must set its own freshness headers, since `_headers` applies only to static
+assets. Vite dev/preview and GitHub Pages do not apply Cloudflare `_headers`.
+Check response headers with Wrangler locally or after Cloudflare deployment.
+
 ## Social sharing preview
 
 `index.html` includes Open Graph and large-image Twitter card metadata with the

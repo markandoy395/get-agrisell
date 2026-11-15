@@ -1,0 +1,55 @@
+body {
+  padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.site-header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: calc(160px + env(safe-area-inset-top, 0px));
+  }
+
+  .nav-links {
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .footer-brand-group,
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+
+  .install-qr-copy,
+  .install-callout,
+  .role-badge {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .role-badge {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (pointer: coarse) {
+  /* Low specificity preserves the larger download buttons and QR target. */
+  :where(button, a[href]) {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  :where(.announcement-link, .nav-links a, .footer-links a, .install-qr-guide) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

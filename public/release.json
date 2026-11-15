@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.10",
-    "buildNumber":  11,
-    "apkUrl":  "downloads/agrisell-1.0.10-11.apk",
-    "notes":  "Updated buyer, farmer, and rider app with real-data empty states, tracking fixes, and startup improvements."
+    "version":  "1.0.11",
+    "buildNumber":  12,
+    "apkUrl":  "downloads/agrisell-1.0.11-12.apk",
+    "notes":  "Improved button sizing and filters, rider signup layout, custom crop and irrigation options, and current AgriSell app fixes."
 }
