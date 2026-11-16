@@ -120,6 +120,13 @@ Release builds use an isolated `.agrisell-release` folder beside the projects,
 with integration_test omitted only from its temporary pubspec. This avoids
 conflicts with IDE-generated files while preserving the app's integration tests.
 
+Release 1.0.12 (build 13) compresses native libraries using
+`android.packaging.jniLibs.useLegacyPackaging = true` in the Flutter app's
+`android/app/build.gradle.kts`. The universal APK retains ARMv7, ARM64 and x86_64
+support. This reduces installer download size; Android extracts the libraries
+on installation, so installed storage use can increase. Keep the existing signing
+key so users can upgrade previous installations.
+
 ## Source files
 
 - `src/App.jsx`: React page composition.

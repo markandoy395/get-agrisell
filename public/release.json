@@ -1,6 +1,6 @@
 {
-    "version":  "1.0.11",
-    "buildNumber":  12,
-    "apkUrl":  "downloads/agrisell-1.0.11-12.apk",
-    "notes":  "Improved button sizing and filters, rider signup layout, custom crop and irrigation options, and current AgriSell app fixes."
+    "version":  "1.0.12",
+    "buildNumber":  13,
+    "apkUrl":  "downloads/agrisell-1.0.12-13.apk",
+    "notes":  "Smaller Android installer with the latest AgriSell improvements and fixes."
 }
